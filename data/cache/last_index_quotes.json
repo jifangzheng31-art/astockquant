@@ -1,0 +1,73 @@
+{
+  "fetched_at": "2026-10-29T00:29:01+08:00",
+  "quotes": [
+    {
+      "code": "sh000001",
+      "name": "上证指数",
+      "price": 3681.47,
+      "prev_close": 3648.3,
+      "open": 3676.92,
+      "high": 3684.49,
+      "low": 3652.37,
+      "volume": 433622829.0,
+      "amount": 751019240000.0,
+      "change": 33.17,
+      "pct_chg": 0.91,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:00",
+      "source": "腾讯行情",
+      "stale": false
+    },
+    {
+      "code": "sz399001",
+      "name": "深证成指",
+      "price": 11473.18,
+      "prev_close": 11245.73,
+      "open": 11359.08,
+      "high": 11529.6,
+      "low": 11292.7,
+      "volume": 538092409.0,
+      "amount": 877468330000.0,
+      "change": 227.45,
+      "pct_chg": 2.02,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:39",
+      "source": "腾讯行情",
+      "stale": false
+    },
+    {
+      "code": "sz399006",
+      "name": "创业板指",
+      "price": 2634.76,
+      "prev_close": 2548.15,
+      "open": 2593.15,
+      "high": 2647.63,
+      "low": 2562.9,
+      "volume": 181409982.0,
+      "amount": 452226230000.0,
+      "change": 86.61,
+      "pct_chg": 3.4,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:54",
+      "source": "腾讯行情",
+      "stale": false
+    },
+    {
+      "code": "sh000300",
+      "name": "沪深300",
+      "price": 4083.87,
+      "prev_close": 4049.55,
+      "open": 4084.62,
+      "high": 4088.02,
+      "low": 4054.11,
+      "volume": 166560161.0,
+      "amount": 419279470000.0,
+      "change": 34.32,
+      "pct_chg": 0.85,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:12",
+      "source": "腾讯行情",
+      "stale": false
+    }
+  ]
+}

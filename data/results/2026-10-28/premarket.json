@@ -1,0 +1,1523 @@
+{
+  "schema_version": 1,
+  "mode": "premarket",
+  "mode_label": "盘前选股",
+  "generated_at": "2026-10-28T23:22:05+08:00",
+  "signal_date": "2026-10-28",
+  "target_date": "2026-10-29",
+  "data_as_of": "2026-10-28",
+  "data_discipline": "所有特征使用 signal_date 及之前的完整日线；盘前结果不含目标日行情。",
+  "calendar": {
+    "source": "AKShare / 新浪交易日历",
+    "reliable": true,
+    "warning": null
+  },
+  "universe": {
+    "source": "新浪财经 / Market_Center",
+    "snapshot_date": "2026-10-28",
+    "snapshot_time": "16:14:00",
+    "fetched_at": "2026-10-28T22:51:51+08:00",
+    "requested": 660,
+    "selected": 220,
+    "rank_rule": "按信号日成交额降序，剔除 ST/退市/北交所/B 股与异常价格",
+    "snapshot_is_exact_signal_date": true,
+    "cached": true
+  },
+  "benchmark": {
+    "code": "sh000300",
+    "name": "沪深300",
+    "latest_date": "2026-10-28",
+    "source": "Baostock（指数，不复权）",
+    "fetched_at": "2026-10-28T23:22:15+08:00",
+    "cached": false
+  },
+  "market": [
+    {
+      "code": "sh000001",
+      "name": "上证指数",
+      "price": 3681.47,
+      "pct_chg": 0.91,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:00",
+      "source": "腾讯行情"
+    },
+    {
+      "code": "sz399001",
+      "name": "深证成指",
+      "price": 11473.18,
+      "pct_chg": 2.02,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:39",
+      "source": "腾讯行情"
+    },
+    {
+      "code": "sz399006",
+      "name": "创业板指",
+      "price": 2634.76,
+      "pct_chg": 3.4,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:54",
+      "source": "腾讯行情"
+    },
+    {
+      "code": "sh000300",
+      "name": "沪深300",
+      "price": 4083.87,
+      "pct_chg": 0.85,
+      "quote_date": "2026-10-28",
+      "quote_time": "16:14:12",
+      "source": "腾讯行情"
+    }
+  ],
+  "candidates": [
+    {
+      "code": "600276",
+      "name": "恒瑞医药",
+      "score": 94.0,
+      "rank_score": 94.34,
+      "score_breakdown": {
+        "trend": 21.0,
+        "volume_price": 20.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 13.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA10 高于 MA20",
+        "MA20 近 5 日斜率 +1.26%",
+        "20 日平均成交额 28.8 亿元，流动性充足",
+        "量比（对 5 日均量）2.02，温和放量",
+        "近 5 日上涨 2.1%，短线上攻但未过度",
+        "RSI14 58.2，动量健康"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.79，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "突破20日高点",
+        "均线回踩确认",
+        "MACD多头"
+      ],
+      "close": 48.36,
+      "pct_chg": 6.17,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 46.79,
+      "ma10": 46.81,
+      "ma20": 46.34,
+      "ma60": 47.95,
+      "macd_dif": 0.184,
+      "macd_dea": -0.03,
+      "macd_hist": 0.428,
+      "rsi14": 58.25,
+      "atr_pct": 3.16,
+      "vol_ratio": 2.02,
+      "amount_ma20": 2882122224.91,
+      "excess_5": 2.75,
+      "excess_10": 9.48,
+      "excess_20": 15.91,
+      "drawdown60_pct": -12.02,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 48.36,
+        "entry_zone_low": 46.83,
+        "entry_zone_high": 48.59,
+        "observation_zone": [
+          46.83,
+          48.59
+        ],
+        "stop_loss": 44.49,
+        "stop_distance_pct": 8.0,
+        "target": 51.42,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 44.29,
+        "resistance20": 47.82,
+        "risk_reward_ratio": 0.79,
+        "atr14": 1.53,
+        "atr_pct": 3.16,
+        "risk_level": "中",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 94.0,
+        "basis": [
+          "信号日收盘价 48.36",
+          "ATR14 1.53（占收盘价 3.16%）",
+          "20 日支撑 44.29 / 压力 47.82（均不含信号日）",
+          "MA5 46.79 / MA10 46.81 / MA20 46.34",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T23:05:44+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 1
+    },
+    {
+      "code": "600887",
+      "name": "伊利股份",
+      "score": 93.0,
+      "rank_score": 93.89,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 13.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 14.8 亿元，流动性充足",
+        "近 5 日上涨 3.9%，短线上攻但未过度",
+        "RSI14 66.3，动量健康",
+        "5/10/20 日相对沪深300超额为 4.6/5.2/17.3 个百分点"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.44，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 28.69,
+      "pct_chg": -0.69,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 28.43,
+      "ma10": 28.19,
+      "ma20": 27.81,
+      "ma60": 26.83,
+      "macd_dif": 0.483,
+      "macd_dea": 0.419,
+      "macd_hist": 0.127,
+      "rsi14": 66.27,
+      "atr_pct": 1.77,
+      "vol_ratio": 0.95,
+      "amount_ma20": 1475391801.95,
+      "excess_5": 4.63,
+      "excess_10": 5.16,
+      "excess_20": 17.31,
+      "drawdown60_pct": -0.69,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 28.69,
+        "entry_zone_low": 28.18,
+        "entry_zone_high": 28.9,
+        "observation_zone": [
+          28.18,
+          28.9
+        ],
+        "stop_loss": 26.39,
+        "stop_distance_pct": 8.0,
+        "target": 29.71,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 26.45,
+        "resistance20": 28.96,
+        "risk_reward_ratio": 0.44,
+        "atr14": 0.51,
+        "atr_pct": 1.77,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 93.0,
+        "basis": [
+          "信号日收盘价 28.69",
+          "ATR14 0.51（占收盘价 1.77%）",
+          "20 日支撑 26.45 / 压力 28.96（均不含信号日）",
+          "MA5 28.43 / MA10 28.19 / MA20 27.81",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:55:31+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 2
+    },
+    {
+      "code": "601166",
+      "name": "兴业银行",
+      "score": 91.0,
+      "rank_score": 91.94,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 11.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 18.0 亿元，流动性充足",
+        "近 5 日上涨 4.1%，短线上攻但未过度",
+        "RSI14 68.6，动量健康",
+        "5/10/20 日相对沪深300超额为 4.8/7.8/16.9 个百分点"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.41，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 19.1,
+      "pct_chg": 0.0,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 18.75,
+      "ma10": 18.59,
+      "ma20": 18.32,
+      "ma60": 18.2,
+      "macd_dif": 0.224,
+      "macd_dea": 0.14,
+      "macd_hist": 0.168,
+      "rsi14": 68.56,
+      "atr_pct": 1.66,
+      "vol_ratio": 0.77,
+      "amount_ma20": 1800535089.3,
+      "excess_5": 4.83,
+      "excess_10": 7.83,
+      "excess_20": 16.9,
+      "drawdown60_pct": 0.0,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 19.1,
+        "entry_zone_low": 18.78,
+        "entry_zone_high": 19.15,
+        "observation_zone": [
+          18.78,
+          19.15
+        ],
+        "stop_loss": 17.57,
+        "stop_distance_pct": 8.0,
+        "target": 19.73,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 17.65,
+        "resistance20": 19.12,
+        "risk_reward_ratio": 0.41,
+        "atr14": 0.32,
+        "atr_pct": 1.66,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 91.0,
+        "basis": [
+          "信号日收盘价 19.10",
+          "ATR14 0.32（占收盘价 1.66%）",
+          "20 日支撑 17.65 / 压力 19.12（均不含信号日）",
+          "MA5 18.75 / MA10 18.59 / MA20 18.32",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:53:21+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 3
+    },
+    {
+      "code": "000333",
+      "name": "美的集团",
+      "score": 91.0,
+      "rank_score": 91.69,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 11.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 24.4 亿元，流动性充足",
+        "近 5 日上涨 2.4%，短线上攻但未过度",
+        "RSI14 56.2，动量健康",
+        "5/10/20 日相对沪深300超额为 3.1/5.8/14.2 个百分点"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.29，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 85.91,
+      "pct_chg": 1.02,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 85.47,
+      "ma10": 85.23,
+      "ma20": 83.77,
+      "ma60": 84.96,
+      "macd_dif": 0.357,
+      "macd_dea": 0.072,
+      "macd_hist": 0.571,
+      "rsi14": 56.17,
+      "atr_pct": 2.28,
+      "vol_ratio": 0.74,
+      "amount_ma20": 2436079381.12,
+      "excess_5": 3.13,
+      "excess_10": 5.81,
+      "excess_20": 14.22,
+      "drawdown60_pct": -3.42,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 85.91,
+        "entry_zone_low": 83.95,
+        "entry_zone_high": 86.89,
+        "observation_zone": [
+          83.95,
+          86.89
+        ],
+        "stop_loss": 79.04,
+        "stop_distance_pct": 8.0,
+        "target": 87.87,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 78.3,
+        "resistance20": 87.18,
+        "risk_reward_ratio": 0.29,
+        "atr14": 1.96,
+        "atr_pct": 2.28,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 91.0,
+        "basis": [
+          "信号日收盘价 85.91",
+          "ATR14 1.96（占收盘价 2.28%）",
+          "20 日支撑 78.30 / 压力 87.18（均不含信号日）",
+          "MA5 85.47 / MA10 85.23 / MA20 83.77",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:53:35+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 4
+    },
+    {
+      "code": "601857",
+      "name": "中国石油",
+      "score": 91.0,
+      "rank_score": 91.48,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 15.0,
+        "momentum": 18.0,
+        "relative_strength": 20.0,
+        "risk": 13.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 19.1 亿元，流动性充足",
+        "价格上涨但量能一般",
+        "近 5 日上涨 5.6%，短线上攻但未过度",
+        "5/10/20 日相对沪深300超额为 6.3/8.8/33.0 个百分点"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.35，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 13.26,
+      "pct_chg": 0.45,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 13.06,
+      "ma10": 12.88,
+      "ma20": 12.19,
+      "ma60": 11.25,
+      "macd_dif": 0.578,
+      "macd_dea": 0.5,
+      "macd_hist": 0.157,
+      "rsi14": 74.85,
+      "atr_pct": 2.8,
+      "vol_ratio": 0.84,
+      "amount_ma20": 1910728442.34,
+      "excess_5": 6.26,
+      "excess_10": 8.83,
+      "excess_20": 33.03,
+      "drawdown60_pct": -0.9,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 13.26,
+        "entry_zone_low": 12.89,
+        "entry_zone_high": 13.45,
+        "observation_zone": [
+          12.89,
+          13.45
+        ],
+        "stop_loss": 12.2,
+        "stop_distance_pct": 8.0,
+        "target": 13.63,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 10.51,
+        "resistance20": 13.54,
+        "risk_reward_ratio": 0.35,
+        "atr14": 0.37,
+        "atr_pct": 2.8,
+        "risk_level": "中",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 91.0,
+        "basis": [
+          "信号日收盘价 13.26",
+          "ATR14 0.37（占收盘价 2.80%）",
+          "20 日支撑 10.51 / 压力 13.54（均不含信号日）",
+          "MA5 13.06 / MA10 12.88 / MA20 12.19",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:54:43+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 5
+    },
+    {
+      "code": "300124",
+      "name": "汇川技术",
+      "score": 91.0,
+      "rank_score": 91.2,
+      "score_breakdown": {
+        "trend": 21.0,
+        "volume_price": 20.0,
+        "momentum": 18.0,
+        "relative_strength": 20.0,
+        "risk": 12.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 17.2 亿元，流动性充足",
+        "量比（对 5 日均量）1.34，温和放量",
+        "RSI14 60.5，动量健康",
+        "5/10/20 日相对沪深300超额为 13.2/17.0/14.0 个百分点"
+      ],
+      "risks": [
+        "近 5 日已涨 12.5%，短线获利盘较多",
+        "按当前收盘价计算的风险收益比仅 0.88，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "突破20日高点",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 56.16,
+      "pct_chg": 5.35,
+      "limit_pct": 20.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 53.63,
+      "ma10": 51.87,
+      "ma20": 51.55,
+      "ma60": 56.87,
+      "macd_dif": -0.352,
+      "macd_dea": -1.266,
+      "macd_hist": 1.828,
+      "rsi14": 60.46,
+      "atr_pct": 3.51,
+      "vol_ratio": 1.34,
+      "amount_ma20": 1720535866.49,
+      "excess_5": 13.23,
+      "excess_10": 17.02,
+      "excess_20": 14.04,
+      "drawdown60_pct": -13.07,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 56.16,
+        "entry_zone_low": 54.19,
+        "entry_zone_high": 56.46,
+        "observation_zone": [
+          54.19,
+          56.46
+        ],
+        "stop_loss": 51.67,
+        "stop_distance_pct": 8.0,
+        "target": 60.1,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 48.5,
+        "resistance20": 55.78,
+        "risk_reward_ratio": 0.88,
+        "atr14": 1.97,
+        "atr_pct": 3.51,
+        "risk_level": "中",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 91.0,
+        "basis": [
+          "信号日收盘价 56.16",
+          "ATR14 1.97（占收盘价 3.51%）",
+          "20 日支撑 48.50 / 压力 55.78（均不含信号日）",
+          "MA5 53.63 / MA10 51.87 / MA20 51.55",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T23:05:47+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 6
+    },
+    {
+      "code": "600699",
+      "name": "均胜电子",
+      "score": 91.0,
+      "rank_score": 90.19,
+      "score_breakdown": {
+        "trend": 21.0,
+        "volume_price": 20.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 10.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA20 近 5 日斜率 +2.01%",
+        "20 日平均成交额 16.7 亿元，流动性充足",
+        "量比（对 5 日均量）1.26，温和放量",
+        "近 5 日上涨 4.3%，短线上攻但未过度",
+        "RSI14 55.1，动量健康"
+      ],
+      "risks": [
+        "ATR 波动率 6.02%，波动显著偏高",
+        "高波动/深回撤标的应降低仓位并设置明确止损"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "MACD多头"
+      ],
+      "close": 21.87,
+      "pct_chg": 1.63,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 21.65,
+      "ma10": 20.98,
+      "ma20": 21.4,
+      "ma60": 20.45,
+      "macd_dif": 0.314,
+      "macd_dea": 0.231,
+      "macd_hist": 0.166,
+      "rsi14": 55.09,
+      "atr_pct": 6.02,
+      "vol_ratio": 1.26,
+      "amount_ma20": 1672090994.74,
+      "excess_5": 5.02,
+      "excess_10": 15.9,
+      "excess_20": 15.28,
+      "drawdown60_pct": -8.95,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 21.87,
+        "entry_zone_low": 20.55,
+        "entry_zone_high": 22.53,
+        "observation_zone": [
+          20.55,
+          22.53
+        ],
+        "stop_loss": 20.12,
+        "stop_distance_pct": 8.0,
+        "target": 24.5,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 18.43,
+        "resistance20": 24.5,
+        "risk_reward_ratio": 1.5,
+        "atr14": 1.32,
+        "atr_pct": 6.02,
+        "risk_level": "中",
+        "risk_notes": [
+          "波动率很高"
+        ],
+        "score": 91.0,
+        "basis": [
+          "信号日收盘价 21.87",
+          "ATR14 1.32（占收盘价 6.02%）",
+          "20 日支撑 18.43 / 压力 24.50（均不含信号日）",
+          "MA5 21.65 / MA10 20.98 / MA20 21.40",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:53:31+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 7
+    },
+    {
+      "code": "601328",
+      "name": "交通银行",
+      "score": 90.0,
+      "rank_score": 90.76,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 13.0,
+        "momentum": 19.0,
+        "relative_strength": 18.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 18.6 亿元，流动性充足",
+        "RSI14 66.8，动量健康",
+        "5/10/20 日相对沪深300超额为 0.8/6.4/19.5 个百分点",
+        "ATR 波动率 2.09%，波动可控"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.26，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 8.26,
+      "pct_chg": -0.96,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 8.22,
+      "ma10": 8.21,
+      "ma20": 7.98,
+      "ma60": 7.47,
+      "macd_dif": 0.215,
+      "macd_dea": 0.21,
+      "macd_hist": 0.01,
+      "rsi14": 66.8,
+      "atr_pct": 2.09,
+      "vol_ratio": 0.82,
+      "amount_ma20": 1860756347.47,
+      "excess_5": 0.8,
+      "excess_10": 6.42,
+      "excess_20": 19.54,
+      "drawdown60_pct": -0.96,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 8.26,
+        "entry_zone_low": 8.09,
+        "entry_zone_high": 8.33,
+        "observation_zone": [
+          8.09,
+          8.33
+        ],
+        "stop_loss": 7.6,
+        "stop_distance_pct": 8.0,
+        "target": 8.43,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 7.47,
+        "resistance20": 8.35,
+        "risk_reward_ratio": 0.26,
+        "atr14": 0.17,
+        "atr_pct": 2.09,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 90.0,
+        "basis": [
+          "信号日收盘价 8.26",
+          "ATR14 0.17（占收盘价 2.09%）",
+          "20 日支撑 7.47 / 压力 8.35（均不含信号日）",
+          "MA5 8.22 / MA10 8.21 / MA20 7.98",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:54:48+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 8
+    },
+    {
+      "code": "601398",
+      "name": "工商银行",
+      "score": 90.0,
+      "rank_score": 90.71,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 13.0,
+        "momentum": 19.0,
+        "relative_strength": 18.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 29.8 亿元，流动性充足",
+        "RSI14 63.4，动量健康",
+        "5/10/20 日相对沪深300超额为 2.0/6.3/17.5 个百分点",
+        "ATR 波动率 2.21%，波动可控"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.28，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 8.56,
+      "pct_chg": -0.7,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 8.53,
+      "ma10": 8.47,
+      "ma20": 8.29,
+      "ma60": 7.93,
+      "macd_dif": 0.169,
+      "macd_dea": 0.155,
+      "macd_hist": 0.028,
+      "rsi14": 63.4,
+      "atr_pct": 2.21,
+      "vol_ratio": 0.89,
+      "amount_ma20": 2981763146.85,
+      "excess_5": 1.98,
+      "excess_10": 6.31,
+      "excess_20": 17.54,
+      "drawdown60_pct": -0.7,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 8.56,
+        "entry_zone_low": 8.37,
+        "entry_zone_high": 8.64,
+        "observation_zone": [
+          8.37,
+          8.64
+        ],
+        "stop_loss": 7.88,
+        "stop_distance_pct": 8.0,
+        "target": 8.75,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 7.86,
+        "resistance20": 8.66,
+        "risk_reward_ratio": 0.28,
+        "atr14": 0.19,
+        "atr_pct": 2.21,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 90.0,
+        "basis": [
+          "信号日收盘价 8.56",
+          "ATR14 0.19（占收盘价 2.21%）",
+          "20 日支撑 7.86 / 压力 8.66（均不含信号日）",
+          "MA5 8.53 / MA10 8.47 / MA20 8.29",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "AKShare / 东方财富",
+      "data_fetched_at": "2026-10-28T22:51:53+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 9
+    },
+    {
+      "code": "601288",
+      "name": "农业银行",
+      "score": 90.0,
+      "rank_score": 90.66,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 11.0,
+        "momentum": 19.0,
+        "relative_strength": 20.0,
+        "risk": 15.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 25.9 亿元，流动性充足",
+        "RSI14 66.4，动量健康",
+        "5/10/20 日相对沪深300超额为 2.6/8.5/20.1 个百分点",
+        "ATR 波动率 2.36%，波动可控"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.59，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 7.43,
+      "pct_chg": 0.41,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 7.35,
+      "ma10": 7.29,
+      "ma20": 7.09,
+      "ma60": 6.81,
+      "macd_dif": 0.165,
+      "macd_dea": 0.142,
+      "macd_hist": 0.046,
+      "rsi14": 66.36,
+      "atr_pct": 2.36,
+      "vol_ratio": 0.7,
+      "amount_ma20": 2585582728.89,
+      "excess_5": 2.6,
+      "excess_10": 8.5,
+      "excess_20": 20.06,
+      "drawdown60_pct": 0.0,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 7.43,
+        "entry_zone_low": 7.25,
+        "entry_zone_high": 7.46,
+        "observation_zone": [
+          7.25,
+          7.46
+        ],
+        "stop_loss": 6.84,
+        "stop_distance_pct": 8.0,
+        "target": 7.78,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 6.64,
+        "resistance20": 7.43,
+        "risk_reward_ratio": 0.59,
+        "atr14": 0.18,
+        "atr_pct": 2.36,
+        "risk_level": "低",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 90.0,
+        "basis": [
+          "信号日收盘价 7.43",
+          "ATR14 0.18（占收盘价 2.36%）",
+          "20 日支撑 6.64 / 压力 7.43（均不含信号日）",
+          "MA5 7.35 / MA10 7.29 / MA20 7.09",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:53:24+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 10
+    },
+    {
+      "code": "300432",
+      "name": "富临精工",
+      "score": 89.0,
+      "rank_score": 88.65,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 19.0,
+        "momentum": 16.0,
+        "relative_strength": 20.0,
+        "risk": 9.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 7.0 亿元，流动性较好",
+        "量比（对 5 日均量）1.45，温和放量",
+        "RSI14 65.8，动量健康",
+        "5/10/20 日相对沪深300超额为 14.0/27.1/23.8 个百分点"
+      ],
+      "risks": [
+        "股价高于 MA20 15.0%，短线乖离偏大",
+        "近 5 日已涨 13.4%，短线获利盘较多",
+        "近 10 日涨幅 23.9%，存在追高风险",
+        "ATR 波动率 4.87%，波动偏高",
+        "距 MA20 乖离 15.0%，严重偏离均线"
+      ],
+      "setup": [
+        "突破20日高点",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 15.27,
+      "pct_chg": 5.46,
+      "limit_pct": 20.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 14.24,
+      "ma10": 13.63,
+      "ma20": 13.28,
+      "ma60": 14.48,
+      "macd_dif": 0.117,
+      "macd_dea": -0.199,
+      "macd_hist": 0.632,
+      "rsi14": 65.75,
+      "atr_pct": 4.87,
+      "vol_ratio": 1.45,
+      "amount_ma20": 703370017.0,
+      "excess_5": 14.05,
+      "excess_10": 27.12,
+      "excess_20": 23.75,
+      "drawdown60_pct": -9.96,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 15.27,
+        "entry_zone_low": 14.53,
+        "entry_zone_high": 15.38,
+        "observation_zone": [
+          14.53,
+          15.38
+        ],
+        "stop_loss": 14.05,
+        "stop_distance_pct": 8.0,
+        "target": 16.76,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 11.8,
+        "resistance20": 14.8,
+        "risk_reward_ratio": 1.22,
+        "atr14": 0.74,
+        "atr_pct": 4.87,
+        "risk_level": "中",
+        "risk_notes": [
+          "波动率偏高"
+        ],
+        "score": 89.0,
+        "basis": [
+          "信号日收盘价 15.27",
+          "ATR14 0.74（占收盘价 4.87%）",
+          "20 日支撑 11.80 / 压力 14.80（均不含信号日）",
+          "MA5 14.24 / MA10 13.63 / MA20 13.28",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:55:12+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 11
+    },
+    {
+      "code": "300760",
+      "name": "迈瑞医疗",
+      "score": 88.0,
+      "rank_score": 88.49,
+      "score_breakdown": {
+        "trend": 21.0,
+        "volume_price": 14.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 13.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "MA20 近 5 日斜率 +3.06%",
+        "20 日平均成交额 15.1 亿元，流动性充足",
+        "缩量回调，抛压相对有限",
+        "近 5 日上涨 3.1%，短线上攻但未过度",
+        "RSI14 61.9，动量健康"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.76，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "MACD多头"
+      ],
+      "close": 175.3,
+      "pct_chg": -1.41,
+      "limit_pct": 20.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 177.04,
+      "ma10": 172.69,
+      "ma20": 166.47,
+      "ma60": 160.88,
+      "macd_dif": 4.712,
+      "macd_dea": 3.43,
+      "macd_hist": 2.562,
+      "rsi14": 61.92,
+      "atr_pct": 2.78,
+      "vol_ratio": 0.8,
+      "amount_ma20": 1507522211.11,
+      "excess_5": 3.75,
+      "excess_10": 9.71,
+      "excess_20": 22.02,
+      "drawdown60_pct": -4.59,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 175.3,
+        "entry_zone_low": 170.44,
+        "entry_zone_high": 177.73,
+        "observation_zone": [
+          170.44,
+          177.73
+        ],
+        "stop_loss": 161.28,
+        "stop_distance_pct": 8.0,
+        "target": 185.99,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 153.72,
+        "resistance20": 185.99,
+        "risk_reward_ratio": 0.76,
+        "atr14": 4.86,
+        "atr_pct": 2.78,
+        "risk_level": "中",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 88.0,
+        "basis": [
+          "信号日收盘价 175.30",
+          "ATR14 4.86（占收盘价 2.78%）",
+          "20 日支撑 153.72 / 压力 185.99（均不含信号日）",
+          "MA5 177.04 / MA10 172.69 / MA20 166.47",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:54:41+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 12
+    },
+    {
+      "code": "002472",
+      "name": "双环传动",
+      "score": 88.0,
+      "rank_score": 87.76,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 20.0,
+        "momentum": 14.0,
+        "relative_strength": 20.0,
+        "risk": 9.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 10.2 亿元，流动性充足",
+        "量比（对 5 日均量）1.44，温和放量",
+        "动量信号一般",
+        "5/10/20 日相对沪深300超额为 17.2/34.2/30.0 个百分点"
+      ],
+      "risks": [
+        "股价高于 MA20 19.0%，短线乖离偏大",
+        "近 5 日已涨 16.5%，短线获利盘较多",
+        "近 10 日涨幅 31.0%，存在追高风险",
+        "ATR 波动率 4.61%，波动偏高",
+        "距 MA20 乖离 19.0%，严重偏离均线",
+        "按当前收盘价计算的风险收益比仅 1.15，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "突破20日高点",
+        "多头趋势延续",
+        "MACD多头",
+        "突破60日高点"
+      ],
+      "close": 45.1,
+      "pct_chg": 8.91,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 41.36,
+      "ma10": 38.66,
+      "ma20": 37.9,
+      "ma60": 37.24,
+      "macd_dif": 1.355,
+      "macd_dea": 0.476,
+      "macd_hist": 1.759,
+      "rsi14": 72.52,
+      "atr_pct": 4.61,
+      "vol_ratio": 1.44,
+      "amount_ma20": 1017529880.84,
+      "excess_5": 17.16,
+      "excess_10": 34.16,
+      "excess_20": 30.01,
+      "drawdown60_pct": 0.0,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 45.1,
+        "entry_zone_low": 43.02,
+        "entry_zone_high": 45.41,
+        "observation_zone": [
+          43.02,
+          45.41
+        ],
+        "stop_loss": 41.49,
+        "stop_distance_pct": 8.0,
+        "target": 49.26,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 32.31,
+        "resistance20": 43.18,
+        "risk_reward_ratio": 1.15,
+        "atr14": 2.08,
+        "atr_pct": 4.61,
+        "risk_level": "中",
+        "risk_notes": [
+          "波动率偏高",
+          "风险收益比偏低"
+        ],
+        "score": 88.0,
+        "basis": [
+          "信号日收盘价 45.10",
+          "ATR14 2.08（占收盘价 4.61%）",
+          "20 日支撑 32.31 / 压力 43.18（均不含信号日）",
+          "MA5 41.36 / MA10 38.66 / MA20 37.90",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:52:08+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 13
+    },
+    {
+      "code": "002415",
+      "name": "海康威视",
+      "score": 87.0,
+      "rank_score": 87.57,
+      "score_breakdown": {
+        "trend": 21.0,
+        "volume_price": 13.0,
+        "momentum": 20.0,
+        "relative_strength": 20.0,
+        "risk": 13.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 17.1 亿元，流动性充足",
+        "近 5 日上涨 5.6%，短线上攻但未过度",
+        "RSI14 55.2，动量健康",
+        "5/10/20 日相对沪深300超额为 6.3/3.4/13.1 个百分点"
+      ],
+      "risks": [
+        "按当前收盘价计算的风险收益比仅 0.41，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "均线回踩确认",
+        "多头趋势延续",
+        "MACD多头"
+      ],
+      "close": 34.15,
+      "pct_chg": -0.29,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 33.92,
+      "ma10": 33.55,
+      "ma20": 33.24,
+      "ma60": 34.3,
+      "macd_dif": 0.097,
+      "macd_dea": -0.099,
+      "macd_hist": 0.393,
+      "rsi14": 55.18,
+      "atr_pct": 2.58,
+      "vol_ratio": 0.85,
+      "amount_ma20": 1714287700.29,
+      "excess_5": 6.28,
+      "excess_10": 3.44,
+      "excess_20": 13.06,
+      "drawdown60_pct": -10.19,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 34.15,
+        "entry_zone_low": 33.27,
+        "entry_zone_high": 34.59,
+        "observation_zone": [
+          33.27,
+          34.59
+        ],
+        "stop_loss": 31.53,
+        "stop_distance_pct": 7.67,
+        "target": 35.22,
+        "target_rule": "20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）",
+        "support20": 31.85,
+        "resistance20": 35.22,
+        "risk_reward_ratio": 0.41,
+        "atr14": 0.88,
+        "atr_pct": 2.58,
+        "risk_level": "中",
+        "risk_notes": [
+          "风险收益比偏低"
+        ],
+        "score": 87.0,
+        "basis": [
+          "信号日收盘价 34.15",
+          "ATR14 0.88（占收盘价 2.58%）",
+          "20 日支撑 31.85 / 压力 35.22（均不含信号日）",
+          "MA5 33.92 / MA10 33.55 / MA20 33.24",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 20 日压力位（不含当日；超过 3×ATR 时按 3×ATR 封顶）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:55:22+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 14
+    },
+    {
+      "code": "002249",
+      "name": "大洋电机",
+      "score": 87.0,
+      "rank_score": 86.85,
+      "score_breakdown": {
+        "trend": 25.0,
+        "volume_price": 19.0,
+        "momentum": 14.0,
+        "relative_strength": 20.0,
+        "risk": 9.0
+      },
+      "reasons": [
+        "信号仅使用上一完整交易日收盘数据，未引用当日盘中价格",
+        "收盘价站上 MA5",
+        "MA5 高于 MA10",
+        "MA10 高于 MA20",
+        "20 日平均成交额 5.4 亿元，流动性较好",
+        "量比（对 5 日均量）1.59，温和放量",
+        "动量信号一般",
+        "5/10/20 日相对沪深300超额为 25.6/32.1/33.5 个百分点"
+      ],
+      "risks": [
+        "股价高于 MA20 21.1%，短线乖离偏大",
+        "近 5 日已涨 24.9%，短线获利盘较多",
+        "近 10 日涨幅 28.9%，存在追高风险",
+        "ATR 波动率 4.36%，波动偏高",
+        "距 MA20 乖离 21.1%，严重偏离均线",
+        "按当前收盘价计算的风险收益比仅 1.09，现价追入的性价比偏低"
+      ],
+      "setup": [
+        "突破20日高点",
+        "多头趋势延续",
+        "MACD多头",
+        "突破60日高点"
+      ],
+      "close": 8.02,
+      "pct_chg": 4.16,
+      "limit_pct": 10.0,
+      "data_date": "2026-10-28",
+      "history_bars": 347,
+      "ma5": 7.47,
+      "ma10": 6.86,
+      "ma20": 6.62,
+      "ma60": 6.84,
+      "macd_dif": 0.238,
+      "macd_dea": 0.04,
+      "macd_hist": 0.396,
+      "rsi14": 71.17,
+      "atr_pct": 4.36,
+      "vol_ratio": 1.59,
+      "amount_ma20": 540627335.6,
+      "excess_5": 25.6,
+      "excess_10": 32.11,
+      "excess_20": 33.52,
+      "drawdown60_pct": 0.0,
+      "risk_plan": {
+        "data_date": "2026-10-28",
+        "mode": "premarket",
+        "close": 8.02,
+        "entry_zone_low": 7.67,
+        "entry_zone_high": 8.07,
+        "observation_zone": [
+          7.67,
+          8.07
+        ],
+        "stop_loss": 7.38,
+        "stop_distance_pct": 8.0,
+        "target": 8.72,
+        "target_rule": "收盘价 + 2×ATR14（20 日压力已被突破或距离过近）",
+        "support20": 6.04,
+        "resistance20": 7.75,
+        "risk_reward_ratio": 1.09,
+        "atr14": 0.35,
+        "atr_pct": 4.36,
+        "risk_level": "中",
+        "risk_notes": [
+          "波动率偏高",
+          "风险收益比偏低"
+        ],
+        "score": 87.0,
+        "basis": [
+          "信号日收盘价 8.02",
+          "ATR14 0.35（占收盘价 4.36%）",
+          "20 日支撑 6.04 / 压力 7.75（均不含信号日）",
+          "MA5 7.47 / MA10 6.86 / MA20 6.62",
+          "观察区间 = max(支撑×1.002, 收盘−1ATR) 至 min(收盘+0.5ATR, 压力)",
+          "止损参考 = max(min(支撑×0.99, 收盘−1.5ATR), 收盘×0.92)",
+          "目标参考 = 收盘价 + 2×ATR14（20 日压力已被突破或距离过近）"
+        ],
+        "disclaimer": "价格区间由信号日行情按上述固定规则计算，仅作风险观察参考；不构成买卖指令，不保证成交或收益。A 股 T+1，买入后当日不能卖出。"
+      },
+      "data_source": "Baostock（证券宝）",
+      "data_fetched_at": "2026-10-28T22:52:00+08:00",
+      "data_cached": true,
+      "data_warnings": [],
+      "rank": 15
+    }
+  ],
+  "selection_stats": {
+    "universe_size": 220,
+    "history_fetch_limit": 160,
+    "history_success": 159,
+    "history_failed": 1,
+    "history_skipped": {
+      "suspended": 0,
+      "non_qfq": 0,
+      "too_short": 1
+    },
+    "history_source_counts": {
+      "AKShare / 东方财富": 46,
+      "Baostock（证券宝）": 113
+    },
+    "filtered": {
+      "suspended_or_stale": 0,
+      "insufficient_history": 0,
+      "price_out_of_range": 0,
+      "liquidity": 0,
+      "extreme_volatility": 9,
+      "below_score": 81,
+      "non_qfq": 0,
+      "estimated_amount": 0,
+      "limit_up_close": 3
+    },
+    "candidates_before_top_n": 66,
+    "selected": 15,
+    "elapsed_seconds": 16.7
+  },
+  "score_weights": {
+    "trend": 25.0,
+    "volume_price": 20.0,
+    "momentum": 20.0,
+    "relative_strength": 20.0,
+    "risk": 15.0
+  },
+  "score_labels": {
+    "trend": "趋势强度",
+    "volume_price": "量价配合",
+    "momentum": "动量表现",
+    "relative_strength": "相对强度",
+    "risk": "风险控制"
+  },
+  "rank_rule": "按综合评分降序；同分再按模式适配分、20 日成交额和代码排序",
+  "data_sources": [
+    "新浪财经 / Market_Center",
+    "Baostock（指数，不复权）",
+    "AKShare / 东方财富",
+    "Baostock（证券宝）"
+  ],
+  "warnings": [
+    "盘前任务在 23:22 运行，已晚于 09:00；结果仍严格使用上一完整交易日数据",
+    "基准指数日线使用备用真实源：Baostock（指数，不复权）；相对强度按该源收盘价计算。",
+    "首选 AKShare/东方财富个股日线不可用或不完整，本次使用备用真实数据源：Baostock（证券宝）（113 只）。请结合数据日期复核。"
+  ],
+  "failures_preview": {
+    "301660": "有效日线仅 12 条"
+  },
+  "limitations": [
+    "第一阶段只做行情分析、选股、回测与风险管理，不连接券商、不自动下单。",
+    "股票池按信号日成交额取流动性靠前样本，不是全市场 5000+ 只逐只扫描。",
+    "日线使用前复权价；复权因子会随除权除息变化，历史缓存可能需刷新。",
+    "评分低于 55 分的股票不会被补足；候选不足时不使用任何模拟数据填充。",
+    "未纳入公告、财报、龙虎榜、新闻和盘中盘口，不能替代人工复核。",
+    "价格为历史收盘/参考价，不代表下一交易日可成交价；所有结果不承诺收益。"
+  ],
+  "run_context": "streamlit"
+}

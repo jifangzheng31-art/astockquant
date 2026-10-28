@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Runtime data (results are intentionally kept for Streamlit Cloud redeploy)
+data/cache/
+data/locks/
+data/logs/
+data/state/
+
+# Secrets / downloaded tools / deployment staging
+.env
+.streamlit/secrets.toml
+.hf_token
+.github_token
+tools/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
