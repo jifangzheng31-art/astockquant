@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: astockquant
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /_stcore/health
+    autoDeploy: true
+    envVars:
+      - key: ASTOCK_APP_PASSWORD
+        sync: false
+      - key: ASTOCK_DATA_DIR
+        value: /app/data
+      - key: TZ
+        value: Asia/Shanghai
