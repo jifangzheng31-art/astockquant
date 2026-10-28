@@ -171,6 +171,12 @@ def app_password() -> str:
     if env_value:
         return env_value
     try:
+        secret_value = str(st.secrets.get("ASTOCK_APP_PASSWORD", "")).strip()
+        if secret_value:
+            return secret_value
+    except Exception:  # noqa: BLE001 - 本地没有 secrets.toml 时正常降级
+        pass
+    try:
         path = get_settings().state_dir / "app_password.txt"
         if path.exists():
             return path.read_text(encoding="utf-8").strip()
